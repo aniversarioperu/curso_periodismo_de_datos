@@ -34,7 +34,7 @@ de periodismo de datos en esta línea que han ganado concursos internacionales:
   valor de sus casas para pagar menos impuestos. Luego de la investigación 7
   ministros se apresuraron en corregir el valor de sus inmuebles.
 
-## Obtención de datos
+## Obtención de datos lenta
 Si bien una investigación periodística inicia con un dateo ya sea de un
 "garganta profunda" o un Edward Snowden, a veces es necesario obtener los datos
 de manera independiente. A veces los datos son facilitados por el datero pero
@@ -51,6 +51,7 @@ finalmente hacer click en "download". Por ejemplo, durante el segundo gobierno
 aprista se emitieron 2,184 resoluciones y bajar todos estos PDFs manualmente,
 uno por uno, demoraría una eternidad.
 
+## Obtención de datos veloz
 Pero lo bueno es que los archivos están almacenados de manera consistente. El
 nombre del cada archivo PDF consiste en la fecha en que se emitió la resolución
 (ddmmyy, osea día, mes y año):
@@ -68,7 +69,7 @@ calendario. Este programa terminará su trabajo en unas cuantas horas sin
 necesidad que el periodista y/o hacker realicen actividad manual alguna.
 
 Los geeks tienen una herramienta *open-source* para descargar contenido desde
-las web conocida como ``curl``. Si se usa correctamente, este programa puede
+las web conocida como [``curl``](http://en.wikipedia.org/wiki/Curl_(programming_language)). Si se usa correctamente, este programa puede
 aparentar ser un usuario humano, ya que puede suministar nombre de usuario y
 contraseña a las páginas que lo requieran, puede lidiar con cookies, usar
 certificados para autenticación, usar proxies y muchas cosas más. Es algo así
@@ -86,4 +87,11 @@ Esas tareas repetitivas y que pueden ser automatizadas deben ser ejecutadas por
 los hackers y sus computadoras. La labor del periodista es otra, es analizar
 qué datos son importantes de ser cosechados, qué otro tipo de datos deben ser
 asociados con el fin de obtener una historia. La labor analítica y de
-pensamiento crítico debe ser realizada por el periodista.
+pensamiento crítico debe ser realizada por el periodista. Para esto es de vital
+importancia la experiencia e intuición del periodista.
+
+
+## TL;DR
+Amigo periodista, si necesitas bajar cientos, miles de PDFs, imágenes o páginas
+de un sitio web, contáctate con tu geek más cercano. Hay altas probabilidades
+que el geek pueda usar sus habilidades para bajar lo que necesitas en un santiamén.
