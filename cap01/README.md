@@ -67,6 +67,13 @@ que el nombre de los archivos se puede constuir usando las fechas de un
 calendario. Este programa terminará su trabajo en unas cuantas horas sin
 necesidad que el periodista y/o hacker realicen actividad manual alguna.
 
+Los geeks tienen una herramienta *open-source* para descargar contenido desde
+las web conocida como ``curl``. Si se usa correctamente, este programa puede
+aparentar ser un usuario humano, ya que puede suministar nombre de usuario y
+contraseña a las páginas que lo requieran, puede lidiar con cookies, usar
+certificados para autenticación, usar proxies y muchas cosas más. Es algo así
+como la navaja suiza de los geeks para asuntos de descarga de datos.
+
 Como ven, es muy ventajoso para un periodista de investigación estar asociado a
 uno o más hackers, o geeks, o nerds. Uno de los aportes principales de los
 hackers éticos al periodismo de datos es la rapidez. Al aprovechar de sus
