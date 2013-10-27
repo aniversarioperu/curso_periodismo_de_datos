@@ -51,6 +51,8 @@ finalmente hacer click en "download". Por ejemplo, durante el segundo gobierno
 aprista se emitieron 2,184 resoluciones y bajar todos estos PDFs manualmente,
 uno por uno, demoraría una eternidad.
 
+![Yes, I am your typical geek](geekguy.jpg) 
+
 ## Obtención de datos veloz
 Pero lo bueno es que los archivos están almacenados de manera consistente. El
 nombre del cada archivo PDF consiste en la fecha en que se emitió la resolución
@@ -95,3 +97,4 @@ importancia la experiencia e intuición del periodista.
 Amigo periodista, si necesitas bajar cientos, miles de PDFs, imágenes o páginas
 de un sitio web, contáctate con tu geek más cercano. Hay altas probabilidades
 que el geek pueda usar sus habilidades para bajar lo que necesitas en un santiamén.
+
