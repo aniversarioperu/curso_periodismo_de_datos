@@ -1,7 +1,9 @@
 # Periodismo de datos. Capítulo 01
 
+Esta es la primera entrega de un tema que puede ser de tu interés.
+
 ## Clasificación 
-Según la [Global Editors Network](http://www.globaleditorsnetwork.org/) el
+Según la [Global Editors Network](http://www.globaleditorsnetwork.org/), el
 periodismo de datos se puede dividir en varias categorías, las cuales no son
 necesariamente excluyentes ya que usan métodos y protocolos comunes y tienden
 a ser complementarias.
@@ -9,7 +11,7 @@ a ser complementarias.
 Estas son las categorías:
 
 * *[Data-driven investigative journalism](http://en.wikipedia.org/wiki/Data-driven_journalism)*
-* *[Data-driven applications](utero.pe/miercoles)*
+* *[Data-driven applications](http://utero.pe/selallevan/)*
 * *Storytelling with data*
 * *Data journalism website*
 
@@ -47,7 +49,7 @@ y rápidamente si se tiene la ayuda de un hacker (un hacker ético, claro está;
 si no tienes hacker, consíguete un geek).
 Por ejemplo el Ministerio de Justicia tiene en su web todas las resoluciones
 ministeriales emitidas en formato PDF. Bajarse cada PDF implicaría hacer una
-búsqueda en su portal, seleccionar la resolución de qué día te quieres bajar y
+búsqueda en su portal, seleccionar la resolución del día que te quieres bajar y
 finalmente hacer click en "download". Durante el segundo gobierno
 aprista se emitieron 2,184 resoluciones y bajar todos estos PDFs manualmente,
 uno por uno, demoraría una eternidad.
@@ -56,12 +58,12 @@ uno por uno, demoraría una eternidad.
 
 ## Obtención de datos veloz
 Pero lo bueno es que los archivos están almacenados de manera consistente. El
-nombre del cada archivo PDF consiste en la fecha en que se emitió la resolución
+nombre de cada archivo PDF consiste en la fecha en que se emitió la resolución
 (ddmmyy, osea día, mes y año):
 
     http://spij.minjus.gob.pe/Normas/textos/ddmmyyT.pdf
 
-Este trabajo es demasiado facil para un hacker ético. Solo basta escribir un
+Este trabajo es demasiado fácil para un hacker ético. Solo basta escribir un
 programita de 9 líneas de código para bajarse TODAS las resoluciones:
 
 https://gist.github.com/aniversarioperu/7071796
@@ -93,7 +95,7 @@ los hackers y sus computadoras. La labor del periodista es otra, es analizar
 qué datos son importantes de ser cosechados, qué otro tipo de datos deben ser
 asociados con el fin de obtener una historia. La labor analítica y de
 pensamiento crítico debe ser realizada por el periodista. Para esto es de vital
-importancia la experiencia e intuición del periodista.
+importancia la experiencia e intuición de periodista.
 
 
 ## TL;DR
