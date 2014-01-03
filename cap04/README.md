@@ -2,13 +2,21 @@
 
 ![vacaciones útiles 2014](vacaciones_utiles2014.jpg)
 
-# Matrícula
-Hemos notado que varios amixers están tomándose este curso uterino de Periodismo
-de Datos en serio. Este blog siempre ha sido serio, pero hemos decidido hacer
-el curso algo más formal.
+Hemos notado que varios amixers están tomándose este curso uterino de
+Periodismo de Datos en serio. Este blog siempre ha sido serio, pero hemos
+decidido hacer el curso algo más formal.
 
-Por eso anunciamos que, **como parte
-de las vacaciones útiles 2014, están abiertas las matrículas a este curso!**
+Por eso anunciamos que, como parte de las vacaciones útiles 2014, están
+abiertas las matrículas a este curso!
+
+**Si recién te enteras de este curso apúrate en estudiar los capítulos
+anteriores!**
+
+* Capítulo 01: Aprendemos a usar el comando cURL.
+* Capítulo 02: Usando el comando grep para encontrar nombres de narcoindultados.
+* Capítulo 03: Procesamiento de PDFs usando OCR.
+
+# Matrícula
 
 Matricúlate llenando este formulario en [Google Forms](https://docs.google.com/forms/d/1nrG7ot6NsSPzkb-LQkil3gCm8o6H-vJEYDzww5_oe-Y/viewform) y al final
 del curso puedes tramitar un certificado! Tranquilo(a) que el certificado no será
@@ -17,6 +25,8 @@ emitido por ninguna universidad medio pelo. Será emitido por el blog medio pelo
 
 Para recibir el certificado es necesario hacer la tarea. Se emitirá certificado
 a los alumnos más aplicados. Es decir a los que hacen la tarea y acumulen más puntaje.
+**Ojo que el certificado tendrá un costo módico para cubrir gastos
+administrativos, al alcance de los bolsillos populares.**
 
 # Quiz 1
 
@@ -34,7 +44,7 @@ esta dirección:
 Estas mociones están incluidas en 191 páginas web en total (**al parecer TODO es
 saludito saludito**). 
 **Tu tarea es
-averiguar cuántas mociones del día se emitieron durante el año 2013.**
+averiguar cuántas mociones del día (cuántos saludos) se emitieron durante el año 2013.**
 
 **HINT 1:** Si usas Linux o Mac, ya tienes instalado cURL (utilizado en el
 [capítulo 01](http://aniversarioperu.utero.pe/2013/12/04/periodismo-de-datos-capitulo-01/))
@@ -52,7 +62,7 @@ Una vez instalado necesitas abrir una consola (**cmd**) y ejecutar el software t
 
 1. En este caso se usa ``-c cookies.txt`` para guardar los cookies generados
     por la web del Congreso en el archivo cookies.txt
-2. ``-o #1.html`` se usa para que caga página descargada (*output*) se grabe en
+2. ``-o #1.html`` se usa para que cada página descargada (*output*) se grabe en
    el disco duro usando el número del 1 al 100 y con la extensión ``.html``
    (ya que estas son páginas web).
 3. En este ejemplo se usa [1-100] porque queremos descargar páginas que incluyan
