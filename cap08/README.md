@@ -47,6 +47,8 @@ de archivos PDF"**.
 Tabula ha sido creada por el gran [Manuel Aristarán](http://jazzido.com/) con
 la ayuda de ProPublica, La Nación DATA y Knight-Mozilla OpenNews.
 
+![TabulaPDF](img2.png)
+
 Descargas Tabula desde aquí <http://tabula.nerdpower.org/> y está disponible
 para Windows, Mac OS y Linux. También necesitas haber instalado Java.
 
