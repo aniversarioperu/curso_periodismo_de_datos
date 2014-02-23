@@ -1,0 +1,66 @@
+<h1 id="periodismo-de-datos.-capítulo-05">Periodismo de Datos. Capítulo 05</h1>
+<p>Agradezco las respuestas al quiz enviadas por los amixers incritos al curso. <strong>Tenemos la asombrosa cantidad de 33 incritos al curso</strong>, de varias y diversas profesiones!</p>
+<p>En el formulario de inscripción (<a href="https://docs.google.com/forms/d/1nrG7ot6NsSPzkb-LQkil3gCm8o6H-vJEYDzww5_oe-Y/viewform">llénala aquí</a>) había un campo opcional donde podías poner qué cosas esperabas aprender en este curso.</p>
+<p>Esta información me será muy útil porque ya tengo una idea de cómo dirigir el curso. Aquí somos democráticos y ofrecemos lo que la gente pide!</p>
+<p>Quedó pendiente dar la respuestas al Quiz/Tarea de la semana pasada en el <a href="http://aniversarioperu.utero.pe/2014/01/02/periodismo-de-datos-capitulo-04/">Capítulo 04 de este curso uterino</a>.</p>
+<p>Sí, ya hay cuatro capítulos anteriores. Si recién llegas al curso, apúrate y ponte al día!</p>
+<ul>
+<li><a href="http://aniversarioperu.utero.pe/2013/12/04/periodismo-de-datos-capitulo-01/">Capítulo 01</a>: Aprendemos a usar el comando <strong>cURL</strong>.</li>
+<li><a href="http://aniversarioperu.utero.pe/2013/12/18/periodismo-de-datos-capitulo-02/">Capítulo 02</a>: Usando el comando *<em>grep</em> para encontrar nombres de narcoindultados.</li>
+<li><a href="http://aniversarioperu.utero.pe/2013/12/27/periodismo-de-datos-capitulo-03/">Capítulo 03</a>: Procesamiento de PDFs usando <strong>OCR</strong>.</li>
+<li><a href="http://aniversarioperu.utero.pe/2014/01/02/periodismo-de-datos-capitulo-04/">Capítulo 04</a>: Incripciones y Quiz/Tarea.</li>
+</ul>
+<h1 id="respuesta-a-la-tarea">Respuesta a la tarea</h1>
+<p>La tarea consistía en averiguar cuántos saludos envió el Congreso peruano durante el 2013. La lista de saludos emitidas entre los años 2011-2014 están colgados en esta web <a href="http://www.congreso.gob.pe/mociones/mocion2011.asp?lg=&amp;CurPage=1">http://www.congreso.gob.pe/mociones/mocion2011.asp?lg=&amp;CurPage=1</a>.</p>
+<p>Había que usar los conceptos obtenidos en este curso para hacer el conteo de saludos.</p>
+<p>Si asumimos que todas las mociones del orden del día que aparecen colgadas son en realidad &quot;saludos&quot;, podemos contar el número de mociones que aparecen listadas en cada página.</p>
+<p>Si vemos en detalle las páginas vemos que hay un patrón común, las fechas de cada orden del día aparecen de forma consistente. Por ejemplo:</p>
+<blockquote>
+<p>09/12/2013</p>
+</blockquote>
+<p>Como cada moción está fechada. Podemos usar la fecha como indicador del número de mociones. Y si contamos el número de veces que aparece <strong>/2013</strong> en las páginas sabremos el número de mociones que consisten en <strong>saludito saludito</strong>.</p>
+<p>Pero! hay que tomar en cuenta que este texto, <strong>/2013</strong>, puede aparecer en el título de la moción. Por ejemplo <strong>ley 3030/2013-PE</strong>:</p>
+<blockquote>
+<p>... del debate del proyecto de ley 3030/2013-PE y, por consiguiente, perturbaron ...</p>
+</blockquote>
+<h1 id="solución-sofisticada">Solución sofisticada</h1>
+<p>Si queremos una solución sofisticada tendríamos que ver el código HTML de las páginas y darnos cuenta que las fechas siempre van entre los <em>tags</em> <strong><code>&lt;td&gt;&lt;/td&gt;</code></strong>.</p>
+<p>Entonces tendríamos que contar el número de veces que aparece el texto <strong><code>/2013&lt;/td&gt;</code></strong> en las páginas.</p>
+<blockquote>
+<p><code>grep -i -c '/2013&lt;/td&gt;' *.html</code></p>
+</blockquote>
+<h1 id="solución-ingeniosa">Solución ingeniosa</h1>
+<p>Varios amixers mencionan que la primera página que contiene saludos es la número 2 y la última es la número 75. Ya que cada página tiene exactamente 50 entradas solo habría que multiplicar este número por (75 - 3) y sumarle el número de saludos en las páginas 2 y 75.</p>
+<p>Usando el comando <strong>grep</strong> puedes averiguar que la página número 2 tiene 44 saludos y la página 75 tiene solo 4.</p>
+<p>Entonces el número total de saludos sería <code>(75 - 3)*50 + 44 + 4 = 3648</code>.</p>
+<h1 id="solución-simple-pero-más-laboriosa">Solución simple pero más laboriosa</h1>
+<p>Otros amixers me cuentan que usaron el comando <strong>grep</strong> para obtener el número de mociones por archivo y exportaron la información al programa Excel para hacer la suma.</p>
+<p>Usando el comando <strong>grep</strong>:</p>
+<blockquote>
+<p><code>grep -c '/2013&lt;/td&gt;' *html</code></p>
+</blockquote>
+<div class="figure">
+<img src="terminal1.png" alt="datos obtenidos usando grep" /><p class="caption">datos obtenidos usando grep</p>
+</div>
+<p>Si haces la suma tendrás el total de <strong>3648</strong> saluditos.</p>
+<h1 id="solución-aproximada">Solución aproximada</h1>
+<p>Otros amixers decidieron contar el número de palabras que contienen cualquiera de las &quot;Saludo, Saluda y Saludar&quot;.</p>
+<p>Para esto usaron el siguiente comando <strong>grep</strong>:</p>
+<blockquote>
+<p>grep -c 'salud' *html</p>
+</blockquote>
+<p>Esta solución es válida, pero te da un número aproximado porque hay mociones que no incluyen las palabras &quot;<strong>Salud</strong>xx&quot; pero también pueden ser consideradas como saludos. Por ejemplo estos saludos:</p>
+<ul>
+<li>Saluda por celebrarse el 23 de noviembre el 51º aniversario de edición Correo Huancayo</li>
+<li>Expresar especial reconocimiento a la Academia Pre Universitaria &quot;Ingeniería&quot;</li>
+<li>Felicitar a la empresa Compañía e Inversiones FORLI, por conmemorar su 13º aniversario de fundación</li>
+<li>Rendir homenaje a la Cámara de Comercio, Industria y Turismo de Ucayali</li>
+</ul>
+<h1 id="cuál-es-la-respuesta">Cuál es la respuesta</h1>
+<p>Como todo en la vida, nada es blanco y negro. Todos es en tono de grises. Si consideras que todas las mociones son saludos debes haber obtenido 3648 saludos durante el 2013. Si consideras que sólo son saludos aquellas mociones que includen las palabras &quot;Saludar, Saluda o Saludo&quot; deberías obtener un poco menos.</p>
+<p>He ploteado los resultados enviados por los amixers inscritos al curso y este es el consenso de sus respuestas:</p>
+<div class="figure">
+<img src="respuestas.png" alt="respuestas" /><p class="caption">respuestas</p>
+</div>
+<p>Sería chevere si repites el ejercicio y ves si te sale el resultado obtenido por tus compañeritos de curso.</p>
+<p>La próxima semana seguiremos con el curso con otro tema que te encantará.</p>

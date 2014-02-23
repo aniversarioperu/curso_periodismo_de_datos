@@ -1,0 +1,46 @@
+<h1 id="periodismo-de-datos.-capítulo-03">Periodismo de datos. Capítulo 03</h1>
+<p>En el <a href="http://aniversarioperu.utero.pe/2013/12/18/periodismo-de-datos-capitulo-02/">capítulo anterior</a> te mostré lo fácil que es ubircar al indultado EDWIN VALENZUELA entre los 2,184 normas jurídicas emitidas por el Ministerio de Justicia durante el segundo gobierno aprista.</p>
+<p>Esto se podía hacer fácilmente convirtiendo los PDF a archivos TXT (<em>plain text</em>) ya que las normas jurídicas fueron publicadas como archivos PDF conteniendo texto, no imágenes.</p>
+<p>Mira tú:</p>
+<div class="figure">
+<img src="pdf_minjus.png" alt="Imagen PDF congreso" /><p class="caption">Imagen PDF congreso</p>
+</div>
+<p>Pero qué pasa si quieres analizar los PDFs emitidos por el venerable Congreso de la República? Sus PDFs son horribles, mira:</p>
+<div class="figure">
+<img src="pdf_congreso.png" alt="Imagen PDF congreso" /><p class="caption">Imagen PDF congreso</p>
+</div>
+<p>Estos PDFs son el resultado de:</p>
+<ul>
+<li>Imprimir el texto en papel</li>
+<li>Escanear las hojas impresas</li>
+<li>Armar el PDF y publicar en la página web</li>
+</ul>
+<p>Entonces estos PDFs están compuestos de imágenes. No se pueden convertir a archivos TXT usando el método aplicado con los PDFs del Ministerio de Justicia.</p>
+<p>Y ahora? cómo hacer el análisis de datos usando estos PDFs compuestos por imágenes? es el fin? no somos nada?</p>
+<h1 id="ocr-al-rescate">OCR al rescate</h1>
+<p>Nos puede servir una técnica llamada <em>Optical character recognition</em> que te convierte imágenes a texto.</p>
+<p>Según Wikipedia el <strong><a href="http://es.wikipedia.org/wiki/Reconocimiento_%C3%B3ptico_de_caracteres">Reconocimiento óptico de caracteres</a></strong>:</p>
+<blockquote>
+<p>...es un proceso dirigido a la digitalización de textos, los cuales identifican automáticamente a partir de una imagen símbolos o caracteres que pertenecen a un determinado alfabeto, para luego almacenarlos en forma de datos</p>
+</blockquote>
+<p>Existe un <a href="http://en.wikipedia.org/wiki/Tesseract_(software)">software <em>open source</em> llamado <strong>tesseract</strong></a> que se encarga de realizar OCR sobre archivos de imágenes. Tú le das imágenes y te devuelve texto. <strong>tesseract</strong> es capaz de reconocer texto escrito en Español, Inglés, Sueco, Swahili, Japonés, Hebreo, <em>Middle English</em>, etc, etc (66 idiomas en total).</p>
+<p>Algunos están pidiendo que también pueda reconocer Klingon y <em>Elvish</em> (#okno, #whynot).</p>
+<p>Si tenemos descargados miles de PDFs compuestos por imágenes, podemos convertirlos todos de un porrazo usando un par de comandos en una consola de Linux. Primero se extraen las imágenes del PDF y en el segundo paso se usa <strong>tesseract</strong> para hacer la conversión (es necesario especificar el lenguaje en el que está escrito el texto).</p>
+<p>Paso 1. Extraer las imágenes contenidas en miles de PDFs:</p>
+<blockquote>
+<p>ls *pdf | parallel -I {} pdfimages -j {} {.}</p>
+</blockquote>
+<p>Paso 2. Convertir miles de imágenes a texto usando OCR:</p>
+<blockquote>
+<p>ls | grep -v pdf | parallel -I {} tesseract {} {.} -l spa</p>
+</blockquote>
+<p>Luego de un rato tendremos nuestro folder lleno de archivos de texto. Y este es el texto extraído de uno de los PDFs (imagen de más arriba).</p>
+<blockquote>
+<p>CONGRESO n: u nwuauca</p>
+<p>Japón, seguido por los Estados Unidos, España y otros países“; estos se resumen en la siguiente tabla:</p>
+<p>PAIS Año/Legislación Lugares No. mínimo Financiamiento DEA Japón 2004 Según voluntad pública y/o privada, Público/privado escuelas, instalaciones medicas, deportivas. culturales y medios de transporte público. Estados Unidos 2005, Ley No.20 Edificios públicos, parques, guarderías, 1/250 Sin información centros de tercera edad, escenarios deportivos y clubes de salud. Terminales de Ferry, 1 / 100o España 2009, Real Decreto Voluntad de entidades públicas o privadas Sin información 365/2009 que deberán notiﬁcar a la autoridad sanitaria quien dispone la instalación del DEA. Colombia 2008. Proyecto Ley Terminales de transportes. 1/500 Institución que posea No. 149 DEA Centros comerciales, 1/1000m? Estadios, 1/1000 Centros de eventos. 1/100 Instituciones educativas. 1/500 Edificios &gt; 100 personas 1/100 Tren, avión, barco 1/100 Uruguay 2008, Ley No. 18360 Todo lugar que disponga el Ministerio de Institución que posea Salud Pública. DEA</p>
+<p>46 Patricio Meller Bock Luis Javier Venegas Nuñez. Expansión del uso de desﬁbriladores externos automáticos en Chile, mediante la creación de la empresa CARDlOVIDA S.A. Santiago de Chile Abril 2012.</p>
+<p>Jr. Hua/Inga N“ 358 — 360/ Edificio Fernanda Be/aúnde Terry / Oficina 203 Teléfono 311-7480 f 3</p>
+</blockquote>
+<p>Te darás cuenta que no se han podido reconocer el 100% del texto. El porcentaje de eficacia depende de la calidad de la imagen escaneada (alta calidad, que la imagen no esté chueca, que la hoja no esté arrugada, etc.)</p>
+<p>Ahora sí puedes hacer un análisis de datos buscando información interesante en tus archivos y puedes hacerlo eficientemente usando el comando <strong>grep</strong> reseñado en el <a href="http://aniversarioperu.utero.pe/2013/12/18/periodismo-de-datos-capitulo-02/">Capítulo 02 de este curso uterino</a>.</p>
