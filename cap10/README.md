@@ -1,6 +1,6 @@
 # Periodismo de Datos. Capítulo 10
 
-## Fiscalizando los viajes de los congresistas via twitter
+## Fiscalizando los viajes de los congresistas vía twitter
 En el [capítulo anterior de este curso](http://aniversarioperu.utero.pe/2014/02/17/periodismo-de-datos-capitulo-09/)
 habíamos explorado la posibilidad de fiscalizar los viajes al exterior de los
 congresistas de la república.
@@ -13,6 +13,9 @@ manera.
 Para este fin había descargado los tuits georeferenciados más recientes de
 nuestros congresistas y los había ploteado sobre un Google Map 
 ([ver el resultado aquí](http://aniversarioperu.me/utero/todos_congresistas.html)).
+El objetivo era explorar las posibilidades de averiguar si los congresistas
+habían viajado dentro del permiso otorgado en base a los tuits georeferenciados
+que han podido emitir desde el extranjero.
 
 ![](img1.png)
 
@@ -20,13 +23,14 @@ nuestros congresistas y los había ploteado sobre un Google Map
 Gracias a los amixers que enviaron sus respuestas. Todos estuvieron acertados.
 
 ## Estas fueron las preguntas:
-Ubicar aquel acuerdo de mesa directiva donde la congresista Carmen Omonte haya recibido permiso para viajar a España.
+**Pregunta 1:** Ubicar aquel acuerdo de mesa directiva donde la congresista (y
+flamante ministra) Carmen Omonte haya recibido permiso para viajar a España.
 Corroborar si ella se quedó en España durante el periodo autorizado. Averiguar
 si los pasajes y viáticos usados por la congresista Carmen Omonte salieron de
 su bolsillo propio o salió de tus impuestos.
 
-Rpta. Tal como lo reportaron ustedes, la autorización para el viaje oficial a
-España es la número ACTAMESA-12-13-43<sup>a</sup>.txt
+**Rpta:** Tal como lo reportaron ustedes, la autorización para el viaje oficial a
+España es el **acuerdo No 215-2012-2013/MESA-CR**.
 
 > 1. Autorizar a la delegación conformada por los Congresistas José León Luna Gálvez,
     Tercer Vicepresidente del Congreso, quien la Presidirá, Luis Fernando Galarreta
@@ -54,6 +58,61 @@ Luna Gálvez, Tercer Vicepresidente del Congreso, según lo dispuesto en el
 Memorándum 276-2012-2013/TVP-CR, quien asumirá los gastos que ocasione dicho
 viaje.
 
+**Pregunta 2:** Averiguar cuáles eran las fechas que comprendían la
+autorización de viaje de la congresista Carmen Omonte a Santiago de Chile.
+
+**Rpta:** Aquí también han acertado los amixers en que no se puede encontrar la
+autorización para el viaje de la congresista Omonte al
+4to Encuentro Peruano Chileno: Pensando en el Futuro. Organizado por Fundacion Chile 21 
+([ver tuit](https://twitter.com/carmenomonte/status/323253641911865344)).
+Tampoco es posible encontrar autorización para su viaje a Santiago de Chile (con viaje
+a la Isla de Pascua) a fines de Marzo.
+En este caso las posibilidades son varias:
+
+* El viaje a la Isla de Pascua fue realizado durante sus vacaciones. Pero se
+  supone que las vacaciones de los congresistas son durante Enero-Febrero. Y ya
+  sabemos que en el 2013 la 
+  [legislatura comenzó el 1ero de Marzo](http://bit.ly/1hl7nKK), y la ahora
+  ministra estuvo en la Isla de Pascua el 29 de
+  Marzo [(ver tuit)](https://twitter.com/carmenomonte/status/317731002325811201).
+* Talvez tuvo licencia para ese viaje. Mi objetivo para este curso llega hasta
+  aquí. Ya los periodistas profesionales juzgarán si esta situación merece
+  tratamiento periodístico, merece mayor investigación, o es algo sin
+  importancia. 
+
+Tal como dije en el [primer
+capítulo](http://aniversarioperu.utero.pe/2013/12/04/periodismo-de-datos-capitulo-01/)
+de este curso:
+
+> [Las] tareas repetitivas pueden ser automatizadas y ejecutadas por los hackers
+y sus computadoras. La labor del periodista es otra, es analizar qué datos son
+importantes de ser cosechados, qué otro tipo de datos deben ser asociados con
+el fin de obtener una historia. La labor analítica y de pensamiento crítico
+debe ser realizada por el periodista. Para esto es de vital importancia la
+experiencia e intuición de periodista.
+
+## Bonus track
+El periodista Martín Hidalgo estuvo [alertando por tuiter](https://twitter.com/martinhidalgo/status/428598285171843072) de los jugosos
+viáticos que reciben los congresistas cuando viajan al extranjero.
+Por ejemplo para un viaje a Francia de 8 días llegan a recibir hasta 12,600
+soles. Esta es la cantidad aproximada que recibe como **sueldo para un mes** un
+profesional con posgrado en Europa.
+
+![](viaticos.png)
+
+Me da curiosidad saber en qué gastan tanto dinero durante sus viajes. Será
+que los congresistas se hospedan en un hotel Sheraton? o en otro de 5
+estrellas?
+
+En el caso de la ministra Carmen Omonte podemos usar los tuits que envió
+durante su estadía en Madrid, España para averiguar en qué hotel se hospedó.
 
 
-Averiguar cuáles eran las fechas que comprendían la autorización de viaje de la congresista Carmen Omonte a Santiago de Chile.
+## Tarea para la casa
+Si usas una combinación del Google Map donde están los tuits de los congresistas
+([aquí](http://aniversarioperu.me/utero/todos_congresistas.html)), con Google
+Stree View y <http://www.tripadvisor.com/>, podrás averiguar la dirección del
+hotel, ver la fachada, el nombre, y si el hotel es pitucazo, modesto,
+o es hotel de mala muerte.
+
+
