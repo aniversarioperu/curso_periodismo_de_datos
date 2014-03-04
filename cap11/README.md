@@ -83,7 +83,7 @@ número de saludos oficiales.
 Se puedo averiguar que el congresista Agustín Molina firmó 576 saludos en lo
 que va de este gobierno. Esto terminó en un reportaje de Jonathan Castro
 ([ver vídeo](http://www.youtube.com/watch?v=0od2QRKwyQY)) para el programa Sin
-Medias Tintas en Frencuencia Latina.
+Medias Tintas en Frecuencia Latina.
 
 # Curso Periodismo de Datos Avanzado
 Creo que el siguiente paso en esta saga educativa sería un "Curso Periodismo de
