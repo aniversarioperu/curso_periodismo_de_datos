@@ -5,15 +5,13 @@ En el [capítulo anterior de este curso](http://aniversarioperu.utero.pe/2014/02
 había quedado pendiente explorar la posibilidad de averiguar en qué hoteles se
 hospedan los congresistas de la república durante sus viajes oficiales al
 extranjero.
-
-Esto es posible ya que algunos congresistas acostumbran a tuitear durante sus
+Esto es posible ya que algunos congresistas acostumbran tuitear durante sus
 viajes usando la opción de emitir tuits conteniendo coordenadas geográficas.
 
 En el [capítulo 9](http://aniversarioperu.utero.pe/2014/02/17/periodismo-de-datos-capitulo-09/)
 de este curso mostré un Google Map 
 [conteniendo los tuits georeferenciados](http://aniversarioperu.me/utero/todos_congresistas.html)
 más recientes de los congresistas más tuiteros.
-
 Al tener esta información de manera gráfica se puede identificar rápidamente
 los patrones de tuiteo de tus congresistas.
 
@@ -38,7 +36,7 @@ por persona.
 
 Rul37 dice: 
 
-> Aniversario Peru Oscila entre 80,16 EUR y 141,75 EUR por noche por persona. Ojo he tomado las fecha similares al viaje de la congresista ahora ministra. No parecen ser descabelladas, ahora eso sí falta considerar alimentación, transporte público... y si de repente no gastan tanto... seguramente el saldo restante se lo guardar en el bolsillo no? (descontando el precio de los pasajes Lima-Madrid-Lima)
+> Oscila entre 80,16 EUR y 141,75 EUR por noche por persona. Ojo he tomado las fecha similares al viaje de la congresista ahora ministra. No parecen ser descabelladas, ahora eso sí falta considerar alimentación, transporte público... y si de repente no gastan tanto... seguramente el saldo restante se lo guardar en el bolsillo no? (descontando el precio de los pasajes Lima-Madrid-Lima)
 
 El costo de 80 o 90 euros por una noche en un hotel de Madrid suena bastante
 razonable.
