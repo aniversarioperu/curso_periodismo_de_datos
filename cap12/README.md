@@ -81,6 +81,9 @@ aprender a desarrollar aplicaciones web usando algún *framework* como Django,
 encargan de realizar las conexiones entre usuarios, base de datos relacional y
 el software necesario para generar la aplicación web.
 
+Estas aplicaciones web **necesariamente** utilizan una base de datos relacional
+como soporte para la información.
+
 Un curso online excelente para aprender el framework Ruby On Rails está
 disponible en <https://onemonth.com/courses/>. Este curso consiste en una serie
 de vídeos que explican desde lo más básico (preparar tu computadora para
@@ -89,6 +92,13 @@ complicadas como crear un clon de Pinterest. He llevado este curso y me
 parece muy bueno para iniciarse en el desarrollo de aplicaciones web con fines
 de *data-driven journalism*. Lo malo es que el curso no es gratuito. Cuesta 99
 dólares, pero es una excelente inversión.
+
+El amixer [@Breno](https://twitter.com/breno) recomienda aprender Python y
+[Django](https://www.djangoproject.com/) ya que existe una comunidad
+grande de pythoneros en Perú y es posible aprender los unos de los otros. Además que buen número de empresas tienen
+preferencia de trabajar con aplicaciones basadas en Django.
+
+![Esquema del aplicación "Se la llevan fácil"](img3.png)
 
 # Entrega de certificados
 Tal como se dijo al comienzo, este curso es gratuito pero la entrega de
